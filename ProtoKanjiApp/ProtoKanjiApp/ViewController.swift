@@ -8,11 +8,14 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    
+    private let levelArray: NSArray = ["N1","N2","N3","N4","N5",]
+    private var levelTableView: UITableView!
+    //setting these two values to private allowed the view controller has no initialisers error to go away.
+    //Reason: You need to set a DEFAULT value for the property when defining the property here its private
+    //File-private access restricts the use of an entity to its own defining source file. Use file-private access to hide the implementation details of a specific piece of functionality when those details are used within an entire file.
     //var greySquare: UIView!
     var answerBox: UILabel!
     var continueButton: UIButton!
@@ -48,19 +51,27 @@ class ViewController: UIViewController {
     var vocabInfoN2 = VocabBuilderN2()
     
     //let increment = VocabBuilder.AccessCounter(wrappedValue: 0)
+
+    
+    
     
         override func viewDidLoad() {
              super.viewDidLoad()
             //let barHeight2: CGFloat =
-//            let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
-//            let displayWidth: CGFloat = self.view.frame.width
-//            let displayHeight: CGFloat = self.view.frame.height
-//            levelTableView = UITableView(frame: CGRect(x: 0, y:barHeight, width: displayWidth, height: displayHeight - barHeight))
-//            levelTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-//            levelTableView.dataSource = self
-//            levelTableView.delegate = self
-//            self.view.addSubview(levelTableView)
-            title = "何回も"
+        
+            navigationController?.title = "何回も"
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationItem.largeTitleDisplayMode = .never
+            
+            let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
+            let displayWidth: CGFloat = self.view.frame.width
+            let displayHeight: CGFloat = self.view.frame.height
+            levelTableView = UITableView(frame: CGRect(x: 0, y:barHeight, width: displayWidth, height: displayHeight - barHeight))
+            levelTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+            levelTableView.dataSource = self
+            levelTableView.delegate = self
+            self.view.addSubview(levelTableView)
+            
             
             func loadView() {
             view = UIView()
@@ -264,6 +275,35 @@ class ViewController: UIViewController {
 
 
             }
+    
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return levelArray.count
+        }
+
+
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            //levelArray[indexPath.row] as! UITableViewCell //force downcast the level array as a UITableViewCell?
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
+            cell.textLabel!.text = "\(levelArray[indexPath.row])"
+        //cell.contentView.addSubview(view)
+            return cell
+        }
+
+//     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//            if let vc = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as? ViewController
+//            {
+//
+//              // let vocabAll = VocabBuilder()
+//                //func getAll () -> String { return
+//                //vc.loadView()
+//                self.addChild(vc)
+//
+//                vc.didMove(toParent: self)
+//
+//               // }
+//            }
+//        }
+
 
     @objc func changeNLevel(_sender: String) {
         switch _sender {
@@ -429,6 +469,7 @@ class ViewController: UIViewController {
     func save(){
 
 
+        
 //        let defaults = UserDefaults.standard
 //        defaults.setValue(pictureViewCount, forKey: "pictureViewCount")
 //

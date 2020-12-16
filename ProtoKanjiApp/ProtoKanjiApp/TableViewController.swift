@@ -10,21 +10,31 @@
 //import UIKit
 //
 //class TableViewController: UITableViewController {
-//    
+//
+//    private let levelArray: NSArray = ["N1", "N2", "N3", "N4", "N5"]
+//  private var levelTableView: UITableView!
+//
 //    override func viewDidLoad() {
-//        
+//
 //        title = "何回も"
-//        
+//
 //        navigationController?.navigationBar.prefersLargeTitles = true
-//        
+//
 //        navigationItem.largeTitleDisplayMode = .never
 //       // let vocabAll = VocabBuilder()
-//        
-//        
+////        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
+////        let displayWidth: CGFloat = self.view.frame.width
+////        let displayHeight: CGFloat = self.view.frame.height
+////        levelTableView = UITableView(frame: CGRect(x: 0, y:barHeight, width: displayWidth, height: displayHeight - barHeight))
+////        levelTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+////        levelTableView.dataSource = self
+////        levelTableView.delegate = self
+////        self.view.addSubview(levelTableView)
+//
 //    }
-//    var vocabN1 = VocabBuilder()
-//        private let levelArray: NSArray = ["N1", "N2", "N3", "N4", "N5"]
-//        private var levelTableView: UITableView!
+//    //var vocabN1 = VocabBuilder()
+//
+//
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //            return levelArray.count
 //        }
@@ -52,4 +62,4 @@
 //               // }
 //            }
 //        }
-//}
+//r}

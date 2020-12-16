@@ -98,7 +98,7 @@ struct VocabBuilder {
        
         //pictureViewCount += 1
      
-        //this was the solution after weeks of trying to get the testvocab array to loop randomly. Now it should be possible to make the first version. Remember your student who helped you  figure this out half way.
+        //this was the solution after weeks of trying to get the testvocab array to loop randomly. Now it should be possible to make the first version. Remember your student who helped you figure this out half way.
         
         //testVocab.capacity
         // this is getting the kanji to show randomly but need an infinite random Int...
