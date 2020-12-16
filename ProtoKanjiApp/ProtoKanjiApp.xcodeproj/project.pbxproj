@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C585DB12580859A00135853 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C585DB02580859A00135853 /* TableViewController.swift */; };
 		6C62F82E25505D750004C91B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62F82D25505D750004C91B /* AppDelegate.swift */; };
 		6C62F83025505D750004C91B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62F82F25505D750004C91B /* SceneDelegate.swift */; };
 		6C62F83225505D750004C91B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62F83125505D750004C91B /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 		6C62F85025505D780004C91B /* ProtoKanjiAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62F84F25505D780004C91B /* ProtoKanjiAppUITests.swift */; };
 		6C62F86125505DA10004C91B /* VocabHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62F86025505DA10004C91B /* VocabHandler.swift */; };
 		6C62F86625505DB60004C91B /* VocabInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62F86525505DB60004C91B /* VocabInfo.swift */; };
+		6C781CAD2578EE210045D0A7 /* VocabHandlerN2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C781CAC2578EE210045D0A7 /* VocabHandlerN2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C585DB02580859A00135853 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		6C62F82A25505D750004C91B /* ProtoKanjiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtoKanjiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C62F82D25505D750004C91B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C62F82F25505D750004C91B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		6C62F85125505D780004C91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C62F86025505DA10004C91B /* VocabHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabHandler.swift; sourceTree = "<group>"; };
 		6C62F86525505DB60004C91B /* VocabInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabInfo.swift; sourceTree = "<group>"; };
+		6C781CAC2578EE210045D0A7 /* VocabHandlerN2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabHandlerN2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				6C62F82F25505D750004C91B /* SceneDelegate.swift */,
 				6C62F83125505D750004C91B /* ViewController.swift */,
 				6C62F86025505DA10004C91B /* VocabHandler.swift */,
+				6C585DB02580859A00135853 /* TableViewController.swift */,
+				6C781CAC2578EE210045D0A7 /* VocabHandlerN2.swift */,
 				6C62F86525505DB60004C91B /* VocabInfo.swift */,
 				6C62F83325505D750004C91B /* Main.storyboard */,
 				6C62F83625505D770004C91B /* Assets.xcassets */,
@@ -264,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C781CAD2578EE210045D0A7 /* VocabHandlerN2.swift in Sources */,
+				6C585DB12580859A00135853 /* TableViewController.swift in Sources */,
 				6C62F83225505D750004C91B /* ViewController.swift in Sources */,
 				6C62F82E25505D750004C91B /* AppDelegate.swift in Sources */,
 				6C62F86125505DA10004C91B /* VocabHandler.swift in Sources */,
@@ -447,6 +455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YTVSGRSC5J;
 				INFOPLIST_FILE = ProtoKanjiApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +463,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Exp.ProtoKanjiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -466,6 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YTVSGRSC5J;
 				INFOPLIST_FILE = ProtoKanjiApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,7 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Exp.ProtoKanjiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
